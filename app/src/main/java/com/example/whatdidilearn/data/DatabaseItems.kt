@@ -3,7 +3,7 @@ package com.example.whatdidilearn.data
 import com.example.whatdidilearn.entities.ItemLearned
 import com.example.whatdidilearn.entities.Level
 
-class DatabaseItens {
+class DatabaseItems {
     fun getAll(): List<ItemLearned> {
         val itemOne = ItemLearned(
             "Kotlin - Null safety",
