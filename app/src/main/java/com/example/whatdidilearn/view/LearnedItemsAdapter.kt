@@ -10,6 +10,10 @@ import com.example.whatdidilearn.entities.ItemLearned
 
 class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemViewHolder>() {
     var data = listOf<ItemLearned>()
+        set(value){
+            field = value
+            notifyDataSetChanged()
+        }
 
     inner class LearnedItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val titleItem: TextView = itemView.findViewById(R.id.itemTitle)
