@@ -14,13 +14,13 @@ class DatabaseItems {
         val itemTwo = ItemLearned(
             "Layout editor",
             "O Design Editor exibe o layout em vários dispositivos e versões do Android.É possível criar e editar um layout usando apenas componentes visuais.",
-            Level.HIGH
+            Level.LOW
         )
 
         val itemThree = ItemLearned(
             "Git",
             "É um sistema de controle de versão distribuído. Com ele é possível rastrear mudanças no código-fonte durante o desenvolvimento de software.",
-            Level.HIGH
+            Level.MEDIUM
         )
 
         val itemFour = ItemLearned(
@@ -29,6 +29,12 @@ class DatabaseItems {
             Level.HIGH
         )
 
-        return listOf(itemOne, itemTwo, itemThree, itemFour)
+        val itemFive = ItemLearned(
+            "View Binding",
+            "View Binding é um recurso que facilita a programação de códigos que interagem com views.",
+            Level.HIGH
+        )
+
+        return listOf(itemOne, itemTwo, itemThree, itemFour, itemFive)
     }
 }
