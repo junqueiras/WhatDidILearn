@@ -5,7 +5,7 @@ import com.example.whatdidilearn.entities.Level
 
 class DatabaseItems {
     fun getAll(): List<ItemLearned> {
-        val itemOne = ItemLearned(
+        val itemOne = ItemLearned (
             "Kotlin - Null safety",
             "O sistema de tipos de Kotlin visa eliminar o perigo de referências nulas do código",
             Level.HIGH

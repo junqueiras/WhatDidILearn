@@ -17,5 +17,5 @@ data class ItemLearned (
 
     @ColumnInfo(name = "item_id")
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int = 0
 )
