@@ -12,7 +12,7 @@ data class ItemLearned (
     @ColumnInfo(name = "item_description")
     val description: String,
 
-    @ColumnInfo(name = "item_understanding_level")
+    @ColumnInfo(name = "item_level")
     val understandingLevel: Level,
 
     @ColumnInfo(name = "item_id")
