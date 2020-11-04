@@ -1,6 +1,7 @@
 package com.example.whatdidilearn.view
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val buttonNextActivity = binding.buttonNextActivity
+        buttonNextActivity.setOnClickListener {
+            var intent = Intent(this,NewLearnedItem::class.java)
+            startActivity(intent)
+        }
+
+        
 
         val recyclerView = binding.itemsRecycleView
         val adapter = LearnedItemsAdapter()
