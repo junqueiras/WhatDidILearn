@@ -14,9 +14,8 @@ class NewLearnedItem : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.title ="New Learned Item"
-//        val buttonNextActivity = binding.buttonNextActivity
-//        buttonNextActivity.hide()
-
+        val buttonNextActivity = binding.buttonNextActivity
+        buttonNextActivity.hide()
     }
 }
 

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">What Did I Learn</string>
-    <string name="item_title">Item Title</string>
+    <string name="item_title">Item Title:</string>
+    <string name="item_description">Item Description:</string>
+    <string name="item_salvar">Salvar</string>
 </resources>
