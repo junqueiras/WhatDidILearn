@@ -5,12 +5,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.whatdidilearn.data.ItemLearnedDao
 import com.example.whatdidilearn.repository.LearnedItemRepository
 
-class LearnedItemViewModelFactory (private val repository: LearnedItemRepository): ViewModelProvider.Factory {
+class NewLearnedItemViewModelFactory(private val repository: LearnedItemRepository): ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(LearnedItemViewModel::class.java)) {
-            return LearnedItemViewModel(repository) as T
+        if (modelClass.isAssignableFrom(NewLearnedItemViewModel::class.java)) {
+            return NewLearnedItemViewModel(repository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
-
 }

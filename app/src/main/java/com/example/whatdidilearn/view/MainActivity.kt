@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.whatdidilearn.R
 import com.example.whatdidilearn.data.DatabaseItems
 import com.example.whatdidilearn.databinding.ActivityMainBinding
+import com.example.whatdidilearn.repository.LearnedItemRepository
 import com.example.whatdidilearn.viewmodel.LearnedItemViewModel
 import com.example.whatdidilearn.viewmodel.LearnedItemViewModelFactory
 import kotlinx.coroutines.CoroutineScope
@@ -33,8 +34,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         val database = DatabaseItems.getDatabase(this, CoroutineScope(Dispatchers.IO))
-        val dao = database.ItemLearnedDao()
-        val viewModelFactory = LearnedItemViewModelFactory(dao)
+        val learnedItemsDao = database.ItemLearnedDao()
+        val repository = LearnedItemRepository(learnedItemsDao)
+        val viewModelFactory = LearnedItemViewModelFactory(repository)
         val viewModel = ViewModelProvider(this, viewModelFactory)
                 .get(LearnedItemViewModel::class.java)
         val itemsList = viewModel.learnedItemsList

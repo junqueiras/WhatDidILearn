@@ -1,22 +1,18 @@
 package com.example.whatdidilearn.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.whatdidilearn.data.ItemLearnedDao
 import com.example.whatdidilearn.entities.ItemLearned
+import com.example.whatdidilearn.entities.Level
 import com.example.whatdidilearn.repository.LearnedItemRepository
 import kotlinx.coroutines.launch
 
-class LearnedItemViewModel(private val repository: LearnedItemRepository): ViewModel() {
-    val learnedItemsList: LiveData<List<ItemLearned>>
+class NewLearnedItemViewModel(private val repository: LearnedItemRepository): ViewModel() {
 
-    init{
-        learnedItemsList = repository.learnedItems
-    }
-
-    fun insertNewLearnedItem(item: ItemLearned) {
+    fun insertNewLearnedItem(itemTitle: String, itemDescription: String) {
         viewModelScope.launch {
+            val item = ItemLearned(itemTitle, itemDescription, Level.HIGH)
             repository.insertNewLearnedItem(item)
         }
     }
