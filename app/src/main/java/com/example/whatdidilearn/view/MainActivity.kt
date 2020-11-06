@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+
 import androidx.lifecycle.liveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whatdidilearn.R
@@ -43,5 +44,7 @@ class MainActivity : AppCompatActivity() {
         itemsList.observe(this, Observer { items ->
             adapter.data = items
         })
+
+
     }
 }

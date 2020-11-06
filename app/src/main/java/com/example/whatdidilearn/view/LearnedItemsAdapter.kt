@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whatdidilearn.R
 import com.example.whatdidilearn.entities.ItemLearned
+import kotlin.random.Random
 
 class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemViewHolder>() {
     var data = listOf<ItemLearned>()
@@ -41,4 +42,11 @@ class LearnedItemsAdapter: RecyclerView.Adapter<LearnedItemsAdapter.LearnedItemV
         val itemLearnedToShow: ItemLearned = data.get(position)
         holder.bind(itemLearnedToShow.title, itemLearnedToShow.description, itemLearnedToShow.understandingLevel.color)
     }
+
+    fun removeItem(view: View) {
+        val index: Int = Random.nextInt(8)
+        //exampleList.removeAt(index)
+        //adapter.notifyItemRemoved()
+    }
+
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    tools:context=".view.MainActivity"
     android:padding="@dimen/container_padding">
 
     <TextView
@@ -37,4 +38,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/itemTitle"
         tools:background="@color/purple_200"></LinearLayout>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_delete"
+        android:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="@+id/itemTitle"
+        app:layout_constraintEnd_toEndOf="@+id/itemTitle"
+        app:layout_constraintTop_toTopOf="@+id/itemTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
